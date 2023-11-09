@@ -1,0 +1,99 @@
+//1
+using System;
+
+class Program_1
+{
+    static void Main()
+    {
+        for (int number_1 = 2; number_1 <= 20; number_1 += 2)
+        {
+            Console.WriteLine(number_1);
+        }
+
+
+//2
+
+        int sum = 0;
+        
+        for (int number_2 = 1; number_2<= 100; number_2++)
+        {
+            sum += number_2;
+        }
+
+        Console.WriteLine("Сума всіх чисел від 1 до 100: " + sum);
+
+
+//3
+
+
+        Console.Write("Введіть число для таблиці множення: ");
+        int number_3 = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Таблиця множення для " + number_3 + ":");
+
+        for (int i = 1; i <= 10; i++)
+        {
+            Console.WriteLine(number_3 + " x " + i + " = " + (number_3 * i));
+        }
+
+
+//4
+
+        Console.Write("Введіть число для обчислення факторіала: ");
+        int number_4 = int.Parse(Console.ReadLine());
+
+        long factorial = 1;
+
+        for (int i = 1; i <= number_4; i++)
+        {
+            factorial *= i;
+        }
+
+        Console.WriteLine("Факторіал числа " + number_4 + " = " + factorial);
+    
+
+//6
+
+
+        Console.Write("Введіть десяткове число: ");
+        int Number_6 = int.Parse(Console.ReadLine());
+
+        string binaryNumber = Convert.ToString(Number_6, 2);
+
+        Console.WriteLine("Двійкове представлення числа " + Number_6 + " = " + binaryNumber);
+    
+//8
+
+
+
+    
+        Console.Write("Введіть перше число: ");
+        int num1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введіть друге число: ");
+        int num2 = int.Parse(Console.ReadLine());
+
+        int gcd = GCD(num1, num2);
+
+        Console.WriteLine("Найбільший спільний дільник (НСД) для " + num1 + " і " + num2 + " = " + gcd);
+    
+
+    static int GCD(int a, int b)
+    {
+        while (b != 0)
+        {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+    }
+}
+
+
+
+
+
+
+
